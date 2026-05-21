@@ -48,3 +48,7 @@ $2^{13} = 8192$
 ## Mathematical Visualization
 
 $x^{13} = x^8 * x^4 * x^1$
+
+# LeetCode 121. Best Time to Buy and Sell Stock
+
+Here I solved the problem in O(n) complexity.
