@@ -64,6 +64,10 @@ i = 0:
 
 
 
+
+
+
+
 # Leetcode 136. Single Number
 
 Here I implemented a **XOR (Bitwise Exclusive OR) approach**.  
