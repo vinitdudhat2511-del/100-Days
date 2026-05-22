@@ -4,7 +4,19 @@ Here I implemented **binary exponentiation**.
 Instead of multiplying $x$ by itself $n$ times (which takes $O(n)$ time),  
 we use powers of 2, reducing the complexity to $O(\log n)$.
 
----
+## Algorithm
+
+The key insight is to use the binary representation of $n$:
+- Each bit in $n$ represents whether to include a power of 2
+- We square $x$ repeatedly while dividing $n$ by 2
+- When $n$ is odd, we multiply the result by the current power
+
+**Strategy:**
+1. Initialize `ans = 1`, `base = x`, `exp = n`
+2. While `exp > 0`:
+   - If `exp` is odd, multiply `ans` by current `base`
+   - Square `base`
+   - Divide `exp` by 2 (right shift)
 
 ## Dry Run Example
 
@@ -43,14 +55,19 @@ n = 0
 **Final Answer:**  
 $2^{13} = 8192$
 
----
-
 ## Mathematical Visualization
 
-$x^{13} = x^8 * x^4 * x^1$
+$x^{13} = x^8 \times x^4 \times x^1$
+
+(Binary 1101 → powers of 8, 4, 1)
+
+## Complexity
+
+- **Time:** $O(\log n)$ - number of bits in $n$
+- **Space:** $O(1)$ - only using constant variables
 
 
-
+---
 
 # LeetCode 121. Best Time to Buy and Sell Stock
 
@@ -101,7 +118,7 @@ MaxProfit remains 5
 - **Space:** $O(1)$ - only using two variables
 
 
-
+---
 
 # LeetCode 11. Container With Most Water
 
