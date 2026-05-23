@@ -98,7 +98,3 @@ while (st <= end) {
 - Target is in the second half (after rotation)
 - Target doesn't exist in array
 - Single element array
-
-
-# Leetcode 852. Peak Index in a Mountain Array
- 
